@@ -28,11 +28,11 @@ let string_to_bit_list stringValue = let bit_list = (List.map int_to_bit_list (s
                                            print_endline (bit_list_to_string bit_list);
                                            bit_list
 
-let sum l=
+let rec sum l=
          match l with
         []->0
-        |h::t-> h+. (sum t);;
+        |h::t-> h + (sum t);;
 
-let count_bits bitList = sum (List.map length bit_list)
+let count_bits bitList = sum (List.map List.length bitList)
 
-let need_append bits = Printf.printf "Your message contains %d bit!" value
+let need_append bits = Printf.printf "Your message contains %d bit!" bits
