@@ -35,4 +35,10 @@ let rec sum l=
 
 let count_bits bitList = sum (List.map List.length bitList)
 
-let need_append bits = Printf.printf "Your message contains %d bit!" bits
+let need_append bits = Printf.printf "Your message contains %d bit! \n" bits;
+                       let bitMod = bits mod 512 in
+                           let toAppend = ((if (bitMod > 447) then (512 + 448) else 448) - bitMod) in
+                               Printf.printf "appending %d bit! \n" toAppend;
+                               [true] @ (int_to_bit_list_rec 0 [] (toAppend - 1))
+                             
+
