@@ -12,7 +12,7 @@
       DerivedKey:                Bytes    array of bytes, DesiredKeyLen long *)
 
 
-
+(* 
 (* CPU/memory cost parameter - Must be a power of 2 (e.g. 1024) *)
 (* (N) *)
 let default_costfactor = 1024
@@ -35,13 +35,15 @@ let default_hLen = 32
 (* The length in octets of the output of the mixing function (SMix below). Defined as r * 128 in RFC7914. *)
 let default_MFLen = 128 * default_blocksize
 
+(* Step 1. Generate expensive salt *)
 let blockSize blocksizeFactor = blocksizeFactor * 128
+ *)
 
-let _ = print_endline "input passphrase";
-        let pass_phrase = input_line stdin in
-            print_endline "input salt";
-            let salt = input_line stdin in  
-             print_endline (salt ^ pass_phrase)
 
-let scrypt passphrase salt = print_endline (passphrase ^ salt)
 
+
+(* let append bit bit_array = bit::bit_array *)
+
+open BitArray
+
+let _ = print_byte_array (string_to_bitList "blababla")
