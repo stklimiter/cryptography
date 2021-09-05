@@ -1,2 +1,3 @@
 
-let _ = BitArray_test.run_all ()
+let _ = Countable_test.run_all ();
+        BitArray_test.run_all ();
