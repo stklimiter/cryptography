@@ -42,11 +42,17 @@ let to_string = function
 
 let print_bit bit =  bit |> to_int  |> print_int 
 
+
+
+
 let rec flatten' list (totalList , size) = match list with 
                         | [] -> (totalList, size)
                         | (head , sizehead) :: tail -> flatten' tail (head @ totalList , size + sizehead)
 
 let flatten list = flatten' list ([],  0)
+
+
+
 
 let rec print_byte_array'  = function
                                     | [] -> ()

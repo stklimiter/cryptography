@@ -44,6 +44,6 @@ let blockSize blocksizeFactor = blocksizeFactor * 128
 
 (* let append bit bit_array = bit::bit_array *)
 
-open BitArray
+open Lib.BitArray
 
 let _ = print_byte_array (string_to_bitList "blababla")
