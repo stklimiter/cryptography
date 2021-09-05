@@ -1,0 +1,4 @@
+(executable
+ (name scrypt)
+  (libraries lib)
+ (modes byte exe))

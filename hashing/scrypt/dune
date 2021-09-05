@@ -1,3 +1,0 @@
-(executable
- (name scrypt)
- (modes byte exe))
