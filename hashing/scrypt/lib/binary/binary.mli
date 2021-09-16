@@ -12,4 +12,6 @@ val int_to_8_binary: int -> binary
 val int_to_binary: int -> int -> binary
 
 (* Converts any string, to 8 bit binary*)
-val string_to_8_binary: string  -> binary
+val string_to_8_binary: string -> binary
+
+val size: binary -> int

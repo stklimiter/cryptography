@@ -26,3 +26,5 @@ let split_on_char (value: string): char list = List.init (String.length value) (
 let string_to_int_list (value: string): int list =  char_to_int (split_on_char value)
 
 let string_to_8_binary string = List.flatten (List.map int_to_8_binary (string_to_int_list string))
+
+let size n = List.length n
